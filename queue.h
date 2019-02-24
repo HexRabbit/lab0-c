@@ -12,6 +12,7 @@
  */
 
 #include <stdbool.h>
+#include <stdint.h>
 
 /************** Data structure declarations ****************/
 
@@ -26,10 +27,8 @@ typedef struct ELE {
 /* Queue structure */
 typedef struct {
     list_ele_t *head; /* Linked list of elements */
-                      /*
-                        You will need to add more fields to this structure
-                        to efficiently implement q_size and q_insert_tail
-                      */
+    list_ele_t *tail;
+    uint64_t size;
 } queue_t;
 
 /************** Operations on queue ************************/
